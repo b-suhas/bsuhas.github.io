@@ -39,3 +39,4 @@ portfolio-html/
 │── style.css         # Styling
 │── script.js         # Animations & interactivity
 │── profile.png       # Profile picture
+│── README.md         # Project documentation
