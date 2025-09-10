@@ -1,0 +1,172 @@
+/* Reset */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+.profile-pic {
+  width: 150px; height: 150px;
+  border-radius: 50%;
+  border: 4px solid #64748b;
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+  animation: popIn 1s ease forwards;
+}
+.hero-title {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+.hero-subtitle {
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #38bdf8;
+}
+
+/* Sections */
+section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background: #38bdf8;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+  gap: 1rem;
+}
+.skill-card {
+  background: #1e293b;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+}
+.skill-card:hover {
+  transform: translateY(-8px);
+  background: #334155;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background: #0f172a;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;} to {opacity: 1;}
+}
+@keyframes popIn {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
+}
+.skill-card, .project-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+.skill-card.show, .project-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #d1d5db;
+  line-height: 1.8;
+}
+
+/* Education */
+.edu-card {
+  background: #1e293b;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  max-width: 600px;
+  transition: transform 0.3s;
+}
+.edu-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Certifications & Extracurricular */
+.certifications ul, .extracurricular ul {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+.certifications li, .extracurricular li {
+  background: #1e293b;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.certifications li:hover, .extracurricular li:hover {
+  transform: scale(1.05);
+  background: #334155;
+}
+
+/* Languages */
+.languages p {
+  font-size: 1.2rem;
+  color: #38bdf8;
+  font-weight: bold;
+}
